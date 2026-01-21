@@ -1,6 +1,6 @@
 hydra:
   searchpath:
-    - /home/zhangqilei/code/deepresearch/searchr1/verl/trainer/config
+    - xxx/verl/trainer/config
     #file://verl/trainer/config
 
 defaults:
