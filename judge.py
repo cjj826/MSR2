@@ -305,7 +305,7 @@ def main(input_files: List[str], method: Optional[str] = None):
                 pred_cls = 0
                 pred_months = -1
 
-        if method == "REM":
+        if method == "MSR^2":
             pred_months = obj.get("answer_text", None)
             try:
                 pred_months = float(pred_months)
@@ -402,7 +402,7 @@ if __name__ == "__main__":
         help="一个或多个 JSONL 文件路径，按给定顺序拼接后统一评测"
     )
 
-    parser.add_argument("--m", type=str, default="REM")
+    parser.add_argument("--m", type=str, default="MSR^2")
     args = parser.parse_args()
     INPUT_FILES = args.i
     main(INPUT_FILES, args.m)
